@@ -226,7 +226,7 @@ by registering appropriate listeners, one for each news network,
 waiting for the publish event.
 ......................................................................*)
 
-let receive_report : string -> unit = 
+let receive_report (_ : string) : unit = 
   let _ = add_listener publish buzzFake in
   let _ = add_listener publish fakeNewsNetwork in ()
 
